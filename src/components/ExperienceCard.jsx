@@ -30,21 +30,26 @@ export default function ExperienceCard({
             </ul>
         )}
 
+        {/* Tags: identical spacing to Projects */}
         {tech.length > 0 && (
-            <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: ".5rem" }}>
+            <div
+            className="card-tags"
+            style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", margin: ".75rem 0" }}
+            >
             {tech.map((t) => (
                 <span key={t} className="tag">{t}</span>
             ))}
             </div>
         )}
 
-        {companySite && (
-            <div style={{ marginTop: ".6rem" }}>
+        {/* Actions: same flex + gap as Projects */}
+        <div className="card-actions" style={{ display: "flex", gap: "0.75rem" }}>
+            {companySite && (
             <a className="btn" href={companySite} target="_blank" rel="noreferrer">
                 Company Site
             </a>
-            </div>
-        )}
+            )}
+        </div>
         </article>
     );
 }

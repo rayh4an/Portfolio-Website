@@ -2,7 +2,7 @@ export default function ProjectCard({ title, desc, bullets = [], tech = [], link
     const { demo, code } = links;
     return (
     <article className="card" style={{ gridColumn: "1 / -1", width: "100%" }}>
-        <h3 style={{ marginTop: 0 }}>{title}</h3>
+        <h3 style={{ margin: 0 }}>{title}</h3>
         {desc && <p style={{ opacity: 0.9 }}>{desc}</p>}
         {bullets.length > 0 && (
             <ul className="proj-bullets">

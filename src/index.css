@@ -163,3 +163,123 @@ nav a.active { background: #192235; }
   gap: 0.75rem;
   margin-top: 0.5rem;
 }
+
+/* 1) Extra spacing scale (optional, handy for tweaks later) */
+:root{
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+}
+
+/* 2) Container padding that adapts phone → desktop */
+.container{
+  padding-inline: clamp(1rem, 3vw, 1.25rem);
+}
+
+/* 3) Page vertical rhythm */
+main.container{
+  padding-block: clamp(1rem, 2.5vw, 2rem);
+}
+section{
+  margin-block: clamp(1rem, 3vw, 1.75rem);
+}
+
+/* 4) Sticky header nav padding (bigger touch targets on mobile) */
+.site-header nav{
+  padding-block: clamp(0.5rem, 1.5vw, 0.75rem);
+}
+
+/* 5) Card padding scales nicely on small screens */
+.card{
+  padding: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* 6) Project/experience bullets: tidy, even spacing */
+.proj-bullets{
+  margin: var(--space-2) 0 0;
+  padding-inline-start: 1.25rem;
+}
+.proj-bullets li{
+  margin-block: var(--space-1);
+  line-height: 1.4;
+}
+
+/* 7) Nav link padding a touch larger for consistency */
+nav a{
+  padding: 0.45rem 0.75rem;
+}
+
+/* 8) Responsive type sizes */
+h1{ font-size: clamp(1.75rem, 2.8vw, 2.2rem); line-height: 1.15; }
+h2{ font-size: clamp(1.25rem, 2vw, 1.5rem); }
+
+/* 9) Safe-area insets (keeps content clear of iOS notches/edges) */
+.site-header{ padding-top: env(safe-area-inset-top); }
+body{
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* optional: make all “detail cards” nicely compact */
+.card { padding: clamp(0.75rem, 2vw, 1rem); }
+.proj-bullets { margin: .25rem 0 0; padding-inline-start: 1.25rem; }
+.proj-bullets li { margin: .25rem 0; line-height: 1.4; }
+
+/* Education card tweaks */
+.muted { opacity: 0.8; }
+
+.edu-sub { line-height: 1.35; }
+
+/* Make sure bullets feel consistent with experience/projects */
+.proj-bullets { margin: .5rem 0 0; padding-inline-start: 1.25rem; }
+.proj-bullets li { margin: .25rem 0; line-height: 1.4; }
+
+/* add a tidy gap below the page title on the Education page */
+.page-education > h1 + * {
+  margin-top: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* --- Hero layout --- */
+.hero{
+  display:flex;
+  align-items:center;
+  gap: clamp(1rem, 4vw, 2rem);
+}
+
+/* Stack on small screens */
+@media (max-width: 768px){
+  .hero{ flex-direction: column; text-align: center; }
+  .hero-actions{ justify-content: center; }
+}
+
+/* Circular avatar with white ring */
+.hero-avatar{
+  flex: 0 0 auto;
+  width: clamp(210px, 30vw, 270px);   /* was 140px, 20vw, 180px */
+  height: clamp(210px, 30vw, 270px);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #fff;          /* white ring */
+  background: #fff;                 /* keeps ring solid */
+  box-shadow: 0 6px 30px rgba(0,0,0,.25);
+}
+.hero-avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                /* fills circle nicely */
+  display: block;
+}
+
+/* Buttons row spacing */
+.hero-actions{
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
