@@ -9,9 +9,9 @@ export const projects = [
     ],
     tech: ["Flutter", "Dart", "OpenWeatherMap", "Firebase"],
     links: { code: "https://github.com/rayh4an/Weather_App"},
-    images: ["public/Projects/Weather App/WeatherAppPic.png", 
-        "public/Projects/Weather App/WeatherAppPic2.png", 
-        "public/Projects/Weather App/WeatherAppPic3.png",],
+    images: ["projects/weather-app/WeatherAppPic.png", 
+        "projects/weather-app/WeatherAppPic2.png", 
+        "projects/weather-app/WeatherAppPic3.png",],
     imageAlt: "Weather app screenshot"
     },
 
@@ -25,9 +25,9 @@ export const projects = [
     ],
     tech: ["Flutter",  "Dart", "SQLite"],
     links: { code: "https://github.com/rayh4an/Recipe_Meal_Planner_App"},
-    images: ["public/Projects/Recipe & Meal Planner/RecipeMealPlannerAppPic.png", 
-        "public/Projects/Recipe & Meal Planner/RecipeMealPlannerAppPic2.png", 
-        "public/Projects/Recipe & Meal Planner/RecipeMealPlannerAppPic3.png",],
+    images: ["projects/recipe-mealplan/RecipeMealPlannerAppPic.png", 
+        "projects/recipe-mealplan/RecipeMealPlannerAppPic2.png", 
+        "projects/recipe-mealplan/RecipeMealPlannerAppPic3.png",],
     imageAlt: "Recipe and Meal Planner app screen"
     },
 
