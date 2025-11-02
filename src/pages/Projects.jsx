@@ -5,7 +5,7 @@ export default function Projects() {
     return (
     <section>
     <h1>Projects</h1>
-    <div className="grid" style={{ marginTop: "1rem" }}>
+    <div className="stack" style={{ marginTop: "1rem" }}>
         {projects.map(p => <ProjectCard key={p.title} {...p} />)}
     </div>
     </section>

@@ -8,7 +8,11 @@ export const projects = [
         "Added personalization features including theme customization, temperature unit switching (°C/°F), and user-defined alerts for weather conditions."
     ],
     tech: ["Flutter", "Dart", "OpenWeatherMap", "Firebase"],
-    links: { code: "https://github.com/rayh4an/Weather_App"}
+    links: { code: "https://github.com/rayh4an/Weather_App"},
+    images: ["public/Projects/Weather App/WeatherAppPic.png", 
+        "public/Projects/Weather App/WeatherAppPic2.png", 
+        "public/Projects/Weather App/WeatherAppPic3.png",],
+    imageAlt: "Weather app screenshot"
     },
 
     {
@@ -20,7 +24,11 @@ export const projects = [
         "Integrated functionality to create, edit, and delete custom recipes, with all data stored locally using SQLite."
     ],
     tech: ["Flutter",  "Dart", "SQLite"],
-    links: { code: "https://github.com/rayh4an/Recipe_Meal_Planner_App"}
+    links: { code: "https://github.com/rayh4an/Recipe_Meal_Planner_App"},
+    images: ["public/Projects/Recipe & Meal Planner/RecipeMealPlannerAppPic.png", 
+        "public/Projects/Recipe & Meal Planner/RecipeMealPlannerAppPic2.png", 
+        "public/Projects/Recipe & Meal Planner/RecipeMealPlannerAppPic3.png",],
+    imageAlt: "Recipe and Meal Planner app screen"
     },
 
     {
