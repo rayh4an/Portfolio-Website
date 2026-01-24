@@ -2,7 +2,7 @@ export const experience = [
     {
     company: "CirrusLabs",
     title: "Software Engineering Intern",
-    period: "May 2025 - August 2025",
+    period: "May 2025 - December 2025",
     location: "Alpharetta, GA",
     bullets: [
         "Designed the frontend of a full-stack CRM web application, enabling seamless translation of Figma prototypes into React components with Django REST APIs through detailed specifications and collaboration with developers.",

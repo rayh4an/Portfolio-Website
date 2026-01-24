@@ -1,5 +1,22 @@
 export const projects = [
     {
+    title: "Home Loan Data Analysis & Prediction",
+    bullets: [
+        "Built an end-to-end deep learning model in Python for predicting home loan approval outcomes, validated through classification performance metrics, by cleaning, preprocessing, and engineering features from historical loan data",
+        "Improved predictive modeling quality through model evaluation on unseen test data by designing, training, and tuning a neural network classifier using TensorFlow/Keras, including architecture and hyperparameter optimization.",
+        "Ensured reliable model evaluation and validation, measured through accuracy, precision, recall, F1-score, and confusion matrices, by systematically testing predictions and analyzing classification behavior on holdout datasets.",
+    ],
+    tech: ["Python", "Pandas", "Numpy", "Matplotlib", "Seaborn", "TensorFlow", "Keras"],
+    links: { code: "https://github.com/rayh4an/Home_Loan_Data_Analysis_and_Prediction"},
+    images: ["projects/home-loan-analysis-predict/Home-Loan-Pic1.png", 
+        "projects/home-loan-analysis-predict/Home-Loan-Pic2.png", 
+        "projects/home-loan-analysis-predict/Home-Loan-Pic3.png",
+        "projects/home-loan-analysis-predict/Home-Loan-Pic4.png"],
+    imgLayout: "grid-2x2",
+    imageAlt: "Home Loan Data Analysis and Prediction screenshots"
+    },
+
+    {
     title: "Weather App",
     bullets: [
         "Designed and developed a Weather App in Dart with global city search, current location detection, and real-time weather updates.",
@@ -12,7 +29,7 @@ export const projects = [
     images: ["projects/weather-app/WeatherAppPic.png", 
         "projects/weather-app/WeatherAppPic2.png", 
         "projects/weather-app/WeatherAppPic3.png",],
-    imageAlt: "Weather app screenshot"
+    imageAlt: "Weather app screenshot",
     },
 
     {
@@ -28,7 +45,7 @@ export const projects = [
     images: ["projects/recipe-mealplan/RecipeMealPlannerAppPic.png", 
         "projects/recipe-mealplan/RecipeMealPlannerAppPic2.png", 
         "projects/recipe-mealplan/RecipeMealPlannerAppPic3.png",],
-    imageAlt: "Recipe and Meal Planner app screen"
+    imageAlt: "Recipe and Meal Planner app screenshot",
     },
 
     {

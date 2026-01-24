@@ -283,3 +283,252 @@ body{
   margin-top: 1rem;
   flex-wrap: wrap;
 }
+
+:root{
+  --gutter: clamp(16px, 4.5vw, 28px);
+  --maxw: 1100px;
+}
+
+/* make padding part of the element's width calc */
+*{ box-sizing: border-box; }
+
+/* this guarantees side space even when text is left-aligned */
+.container{
+  width: min(var(--maxw), 100% - var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* left-align globally */
+body, main, .container, section, article, p, h1, h2, h3, h4{
+  text-align: left;
+}
+
+/* if a hero/intro had inline center styles, override them */
+.hero, .home-hero, .intro, .hero-copy{
+  text-align: left !important;
+}
+
+/* Shared gallery container (you already have this; keep it) */
+.card-gallery{
+  display: grid;
+  gap: 16px;                 /* a bit more breathing room */
+  margin-top: 14px;
+}
+
+/* NEW: 2×2 “quadrants” layout */
+.gallery--grid2x2{
+  grid-template-columns: repeat(2, minmax(320px, 1fr)); /* 2 big columns */
+  align-items: start;
+}
+
+.gallery--grid2x2 img{
+  width: 100%;
+  height: auto;
+  max-height: 240px;         /* make them bigger */
+  object-fit: contain;       /* don’t crop plots */
+  border-radius: 12px;
+  border: 100px solid var(--line);
+  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+  background: #0b1220;
+}
+
+/* Mobile: stack to one column so each stays readable */
+@media (max-width: 640px){
+  .gallery--grid2x2{
+    grid-template-columns: 1fr;
+  }
+  .gallery--grid2x2 img{
+    max-height: 300px;
+  }
+}
+
+/* 2×2 grid with “slightly bigger than phones” image size */
+.pc-gallery.grid-2x2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;               /* space between cells */
+  align-items: start;
+}
+
+.pc-gallery.grid-2x2 img{
+  width: 100%;
+  /* phones are clamp(340px, 28vw, 440px) — make these just a touch bigger */
+  height: clamp(360px, 30vw, 420px);
+  object-fit: contain;     /* keep plots uncropped */
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+/* Tablet: reduce a bit */
+@media (max-width: 900px){
+  .pc-gallery.grid-2x2 img{
+    height: clamp(300px, 36vw, 360px);
+  }
+}
+
+/* index.css */
+.pc-gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:.75rem;
+}
+.pc-gallery img{
+  display:block;
+  width:calc(50% - 6px);   /* two columns on desktop */
+  max-width:520px;
+  border-radius:10px;
+  border:1px solid var(--line);
+}
+@media (max-width:640px){
+  .pc-gallery img{ width:100%; max-width:100%; }
+}
+
+/* Default gallery = small images in a row (used by your other projects) */
+.pc-gallery.row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:.75rem;
+}
+.pc-gallery.row img{
+  display:block;
+  width:220px;           /* keeps phone screenshots modest */
+  max-width:100%;
+  border-radius:10px;
+  border:1px solid var(--line);
+}
+
+/* Home-Loan project only: 2×2 grid with bigger images */
+.pc-gallery.grid4{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;              /* controls BOTH row & column gap inside this grid */
+  margin-top:.75rem;
+}
+.pc-gallery.grid4 img{
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  border:1px solid var(--line);
+}
+
+/* Mobile: stack images full-width for both styles */
+@media (max-width:640px){
+  .pc-gallery.row img{ width:100%; }
+  .pc-gallery.grid4{ grid-template-columns:1fr; }
+}
+
+/* ---------- ProjectCard galleries ---------- */
+
+/* Base gallery: a horizontal strip (used by default on existing projects) */
+.pc-gallery.strip {
+  display: flex;
+  gap: 1rem;             /* space between images */
+  flex-wrap: nowrap;     /* keep in one row on desktop */
+  overflow-x: auto;      /* allow horizontal scroll if needed */
+  padding-top: 0.75rem;
+}
+
+/* Each image in the strip */
+.pc-gallery.strip img {
+  height: 280px;         /* controls size in the strip */
+  width: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+/* 2×2 grid layout (only for cards that request it via imgLayout="grid-quad") */
+.pc-gallery.grid-quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;             /* space between grid cells */
+  margin-top: 0.75rem;
+}
+
+/* Scale the strip images to a comfortable, responsive height */
+.pc-gallery.strip img {
+  /* grows with viewport; never tiny, never huge */
+  height: clamp(340px, 28vw, 440px);
+  width: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+/* Mobile: keep them smaller so they fit nicely */
+@media (max-width: 640px) {
+  .pc-gallery.strip img {
+    height: 230px; /* was 220 — small bump for readability */
+  }
+}
+
+
+/* Mobile: stack to one column so it fits nicely */
+@media (max-width: 640px) {
+  .pc-gallery.strip {
+    flex-wrap: wrap;     /* let them wrap on small screens */
+  }
+  .pc-gallery.strip img {
+    height: 220px;
+  }
+  .pc-gallery.grid-quad {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
+
+/* --- Project images ---------------------------------------------------- */
+
+.pc-gallery {
+  margin-top: 1rem;
+}
+
+/* Phones row (Weather App) */
+.pc-gallery.strip {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.pc-gallery.strip img {
+  /* nice phone size; scales with viewport but capped */
+  width: clamp(220px, 24vw, 300px);
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  background: #0b1220;
+}
+
+/* 2×2 chart grid (Home Loan) */
+.pc-gallery.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;                /* small space between charts */
+  align-items: start;
+}
+
+.pc-gallery.grid-2x2 img {
+  width: 100%;
+  height: auto;
+  /* slightly bigger than phones; not full-bleed */
+  max-width: min(520px, 46vw);
+  justify-self: start;         /* keeps a pleasant left alignment */
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+  background: #0b1220;
+}
+
+/* Mobile: collapse charts to one column and use full width */
+@media (max-width: 700px) {
+  .pc-gallery.grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+  .pc-gallery.grid-2x2 img {
+    max-width: 100%;
+  }
+}
