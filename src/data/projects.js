@@ -1,10 +1,27 @@
 export const projects = [
+        {
+    title: "AI-Powered Research Agent",
+    bullets: [
+        "Built a multi-agent autonomous research system in Python by orchestrating five specialized LangGraph agents (Planner, Researcher, Critic, Synthesizer, Writer) to autonomously plan, search the web, synthesize structured reports.",
+        "Improved predictEngineered a self-correcting critic loop using LangChain and the Tavily API by scoring research quality from 0.0 to 1.0 and triggering follow-up searches when below a 0.9 threshold, ensuring high-quality report generation.",
+        "Implemented dynamic conditional graph routing in LangGraph by designing state schemas and edge logic to control agent transitions and loop iterations, enabling flexible and self-correcting research pipeline execution at runtime.",
+    ],
+    tech: ["Python", "LangGraph", "LangChain", "Groq", "API", "SQLite", "Streamlit"],
+    links: { code: "https://github.com/rayh4an/AI-Powered_Research_Agent"},
+    images: ["projects/ai-powered-research-agent/AI-Research-Pic1.png", 
+        "projects/ai-powered-research-agent/AI-Research-Pic2.png", 
+        "projects/ai-powered-research-agent/AI-Research-Pic3.png",
+        "projects/ai-powered-research-agent/AI-Research-Pic4.png"],
+    imgLayout: "grid-2x2",
+    imageAlt: "AI-Powered Research Agent screenshots"
+    },
+
     {
     title: "Home Loan Data Analysis & Prediction",
     bullets: [
-        "Built an end-to-end deep learning model in Python for predicting home loan approval outcomes, validated through classification performance metrics, by cleaning, preprocessing, and engineering features from historical loan data",
-        "Improved predictive modeling quality through model evaluation on unseen test data by designing, training, and tuning a neural network classifier using TensorFlow/Keras, including architecture and hyperparameter optimization.",
-        "Ensured reliable model evaluation and validation, measured through accuracy, precision, recall, F1-score, and confusion matrices, by systematically testing predictions and analyzing classification behavior on holdout datasets.",
+        "Built an end-to-end machine learning pipeline in Python by performing data ingestion, preprocessing, feature encoding, and class weight balancing on historical home loan data, enabling model training across 228 features.",
+        "Designed and trained a deep neural network using TensorFlow/Keras with a 128-64-32 neuron layer architecture by implementing dropout regularization and early stopping callbacks to prevent overfitting and optimize training.",
+        "Validated model performance on unseen test data by evaluating precision, recall, F1-score, and AUC metrics through confusion matrices and classification reports, confirming 92%+ scores across all key classification metrics.",
     ],
     tech: ["Python", "Pandas", "Numpy", "Matplotlib", "Seaborn", "TensorFlow", "Keras"],
     links: { code: "https://github.com/rayh4an/Home_Loan_Data_Analysis_and_Prediction"},
@@ -19,12 +36,10 @@ export const projects = [
     {
     title: "Weather App",
     bullets: [
-        "Designed and developed a Weather App in Dart with global city search, current location detection, and real-time weather updates.",
-        "Integrated OpenWeatherMap API to display 24-hour and 7-day forecasts, interactive radar maps, and temperature heat overlays.",
-        "Built a community tab enabling user interaction through live weather discussions and custom postcard creation.",
-        "Added personalization features including theme customization, temperature unit switching (°C/°F), and user-defined alerts for weather conditions."
-    ],
-    tech: ["Flutter", "Dart", "OpenWeatherMap", "Firebase"],
+        "Developed a cross-platform Flutter weather application in Dart by integrating the OpenWeatherMap API to deliver real-time weather data, 24-hour and 7-day forecasts, and an interactive radar map with temperature heat map overlays.",
+        "Architected a real-time authentication and data sync system by integrating Firebase Authentication and Cloud Firestore, enabling secure user login, persistent city management, and cross-device synchronization of preferences and settings.",
+        "Implemented a personalized alerting and settings system by building user-defined weather condition triggers, temperature unit switching, and custom theme selection, syncing all preferences to individual Firebase Firestore user profiles."],
+    tech: ["Flutter", "Dart", "OpenWeatherMap", "Firebase", "Firestore", "API"],
     links: { code: "https://github.com/rayh4an/Weather_App"},
     images: ["projects/weather-app/WeatherAppPic.png", 
         "projects/weather-app/WeatherAppPic2.png", 

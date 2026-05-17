@@ -2,16 +2,16 @@ export const experience = [
     {
     company: "CirrusLabs",
     title: "Software Engineering Intern",
-    period: "May 2025 - December 2025",
+    period: "May 2025 - Dec 2025",
     location: "Alpharetta, GA",
     bullets: [
-        "Designed the frontend of a full-stack CRM web application, enabling seamless translation of Figma prototypes into React components with Django REST APIs through detailed specifications and collaboration with developers.",
-        "Collaborated with developers using GitHub for version control, streamlining code reviews, managing pull requests, and ensuring efficient integration of frontend designs with backend APIs.",
-        "Built a voice-enabled deal creation feature, making CRM deal registration accessible and efficient through hands-free natural language input, by integrating Google Speech-to-Text with GPT-4 NLP.",
-        "Designed responsive and user-friendly interfaces, improving usability across core CRM modules (Contacts, Companies, Deals), by creating consistent layouts and intuitive workflows in Figma.",
-        "Created and iterated high-fidelity prototypes, enhancing navigation and data management workflows for business dashboards by incorporating stakeholder feedback and refining user flows."
+        "Built a full-stack CRM web application by integrating React components with Django REST backend APIs, collaborating cross-functionally with developers to ensure seamless data flow between frontend interfaces and server-side services.",
+        "Streamlined development workflows by managing version control, code reviews, and pull requests via GitHub in an Agile/SDLC-driven environment, ensuring consistent and efficient integration of frontend, backend, and API changes.",
+        "Engineered a voice-enabled deal creation feature by integrating Google Speech-to-Text with GPT-4 NLP, enabling hands-free natural language input that streamlined deal registration and improved CRM accessibility.",
+        "Designed and managed PostgreSQL database schemas for core CRM data models by writing and optimizing SQL queries to support efficient data retrieval and storage across Contacts, Companies, and Deals modules.",
+        "Designed responsive and intuitive interfaces across 3 core CRM modules (Contacts, Companies, Deals) by building consistent layouts and user workflows in Figma, improving usability and supporting smooth frontend implementation."
     ],
-    tech: ["React", "Django REST", "Python", "Figma", "CRM"],
+    tech: ["React.js", "Django REST", "Python", "PostgreSQL", "Software Development Lifecycle", "API", "Agile", "CRM", "Figma"],
     links: { companySite: "https://www.cirruslabs.io" }
     }
 ];

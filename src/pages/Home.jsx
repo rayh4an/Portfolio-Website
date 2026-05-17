@@ -19,12 +19,11 @@ export default function Home() {
         </h1>
 
         <p style={{ maxWidth: 720, opacity: 0.9 }}>
-          Welcome to my personal website and portfolio. I was a computer science student at
-          Georgia State University who graduated summer 2025. This website showcases several
-          projects I have completed. It also contains information on my work experience within
-          the industry. I love software engineering &amp; development and I possess the required
-          skills in order to thrive within this industry. I am highly proficient across full-stack
-          development, and I believe I’d be a valuable asset within this industry.
+          Welcome to my personal website and portfolio. I’m a Software Engineer with a strong interest in full-stack development. 
+          I recently graduated with a B.S. in Computer Science from Georgia State University. 
+          I also gained hands-on experience as a Software Engineering Intern at CirrusLabs where I contributed to building a CRM web application. 
+          I will be pursuing my M.S. in Computer Science at Georgia Tech, and I am excited to continue growing my technical skills while contributing to meaningful projects.
+          This website showcases several projects I have completed alongside my work experience within the industry.
         </p>
 
         <div className="hero-actions">
